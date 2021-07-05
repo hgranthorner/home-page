@@ -1,0 +1,12 @@
+extends layout.pug
+block content
+  h1 My Prime Directives
+  ul
+    li
+      h2 Keep it simple
+      p There is nothing that a programmer loves more than introducing complexity. We usually do this with good intentions - let's introduce an abstraction to simplify the code! Let's break up our monolith to improve scalability! Let's introduce our own framework on top of this protocol so customize it to our needs! Our old backend was crap - let's rewrite it in ~~insert new framework/technology here~~. We've all done it. But let's be honest - a big reason why we do this is to give ourselves interesting puzzles to solve. Writing simple CRUD applications on top of opinionated frameworks often leads to feeling like our creativity is being stifled. We feel that we're not learning. In my experience, the biggest killer to projects is introducing these types of unnecessary complexity. Now that's not to say to always avoid complexity - sometimes the domain itself is complicated. Sometimes we really would see a benefit in re-architecting some portion of our code. But 9 times out of 10, I see programmers introducing complexity "for fun".
+    li
+      h2 Keep it testable
+      p Now, if we follow the principle above, we'll end up with a big ol' #[a(href="http://www.laputan.org/mud/") ball of mud]. And to be perfectly honest, this might be ok for certain applications. This website, for example, is a ball of mud - all it does is compile pug templates to html and serve it back to the client. But in a production application, this approach has some serious issues. Logic is duplicated throughout the application, leading to inconsistencies for the end user. The code is very tightly coupled to the underlying framework, making upgrades or refactors challenging to pull off.
+    li
+      h2 Focus on the users
